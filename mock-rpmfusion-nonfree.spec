@@ -1,6 +1,6 @@
 Name:           mock-rpmfusion-nonfree
 Version:        26.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
 Group:          Development/Tools
@@ -34,6 +34,9 @@ install -pm 0644 etc/mock/*_nonfree.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Sun Mar 26 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 26.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Thu Mar 02 2017 Sérgio Basto <sergio@serjux.com> - 26.0-1
 - Add configuration files for Fedora 26
 - Remove Configuration files for Fedora 23
