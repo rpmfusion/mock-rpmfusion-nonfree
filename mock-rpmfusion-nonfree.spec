@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-nonfree
-Version:        30.0
+Version:        30.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
@@ -9,8 +9,8 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-core-configs >= 30.0
-Requires:       mock-rpmfusion-free >= 30.0
+Requires:       mock-core-configs >= 30.1
+Requires:       mock-rpmfusion-free >= 30.1
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -35,6 +35,9 @@ install -pm 0644 etc/mock/*_nonfree.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Tue Apr 02 2019 Sérgio Basto <sergio@serjux.com> - 30.1-1
+- RPMFusion F30 is branched
+
 * Wed Mar 06 2019 Sérgio Basto <sergio@serjux.com> - 30.0-1
 - RPMFusion Rawhide pointing to F30 branched
 
