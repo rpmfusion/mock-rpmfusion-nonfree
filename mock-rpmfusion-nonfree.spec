@@ -1,15 +1,14 @@
 Name:           mock-rpmfusion-nonfree
-Version:        31.1
+Version:        31.2
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
-Group:          Development/Tools
 License:        BSD
 URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 31.1
+Requires:       mock-rpmfusion-free >= 31.2
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -29,12 +28,14 @@ install -pm 0644 etc/mock/*_nonfree.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %files
-%defattr(-,root,root,-)
 %config(noreplace) %{_sysconfdir}/mock/*_nonfree.cfg
 
 
 %changelog
-* Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.0-2
+* Thu Dec 26 2019 Sérgio Basto <sergio@serjux.com> - 31.2-1
+- Allow --enablerepo=rpmfusion-{non,}free-override to work out of the box
+
+* Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.1-1
 - And Centos 8
 
 * Mon Aug 26 2019 Sérgio Basto <sergio@serjux.com> - 31.0-1
