@@ -32,7 +32,7 @@ install -pm 0644 etc/mock/*_nonfree.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
-* Tue Feb 18 2020 Sérgio Basto <sergio@serjux.com> - 31.2-2
+* Tue Feb 18 2020 Sérgio Basto <sergio@serjux.com> - 32.0-1
 - F32 Branch and the forgotten F31 GA
 
 * Thu Dec 26 2019 Sérgio Basto <sergio@serjux.com> - 31.2-1
