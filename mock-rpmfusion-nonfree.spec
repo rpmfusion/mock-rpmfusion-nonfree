@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-nonfree
-Version:        32.0
+Version:        32.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
@@ -8,7 +8,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 32.0
+Requires:       mock-rpmfusion-free >= 32.1
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -32,6 +32,9 @@ install -pm 0644 etc/mock/*_nonfree.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Sun Feb 23 2020 Sérgio Basto <sergio@serjux.com> - 32.1-1
+- Configurations for Mock-2.0
+
 * Tue Feb 18 2020 Sérgio Basto <sergio@serjux.com> - 32.0-1
 - F32 Branch and the forgotten F31 GA
 
