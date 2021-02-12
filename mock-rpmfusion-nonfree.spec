@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-nonfree
-Version:        33.2
+Version:        34.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
@@ -8,7 +8,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 33.2
+Requires:       mock-rpmfusion-free >= 34.0
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -32,6 +32,9 @@ install -pm 0644 etc/mock/*_nonfree.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Fri Feb 12 2021 Sérgio Basto <sergio@serjux.com> - 34.0-1
+- F34 branched
+
 * Sun Jan 17 2021 Sérgio Basto <sergio@serjux.com> - 33.2-1
 - Remove sslcacert on mock configurations because we don't need it anymore,
   koji have a LE certificate
