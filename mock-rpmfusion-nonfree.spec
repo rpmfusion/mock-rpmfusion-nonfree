@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-nonfree
-Version:        35.0
+Version:        35.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
@@ -8,7 +8,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 35.0
+Requires:       mock-rpmfusion-free >= 35.1
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -32,6 +32,11 @@ install -pm 0644 etc/mock/*_nonfree.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Mon Sep 13 2021 Sérgio Basto <sergio@serjux.com> - 35.1-1
+- v2 of add gpgcheck on updates-testing, debuginfo and branched repos
+  commit 373c52a was incompleted
+- Also add buildsys-override repos on rawhide
+
 * Sun Aug 15 2021 Sérgio Basto <sergio@serjux.com> - 35.0-1
 - F35 Branched
 
