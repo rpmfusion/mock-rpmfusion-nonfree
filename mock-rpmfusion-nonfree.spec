@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-nonfree
-Version:        35.1
+Version:        35.2
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
@@ -8,7 +8,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 35.1
+Requires:       mock-rpmfusion-free >= 35.2
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -25,13 +25,19 @@ Mock config files for the RPM Fusion NonFree Repository
 %install
 mkdir -p %{buildroot}%{_sysconfdir}/mock
 install -pm 0644 etc/mock/*_nonfree.cfg %{buildroot}%{_sysconfdir}/mock
+mkdir -p %{buildroot}%{_sysconfdir}/mock/templates
+install -pm 0644 etc/mock/templates/*.tpl %{buildroot}%{_sysconfdir}/mock/templates
 
 
 %files
 %config(noreplace) %{_sysconfdir}/mock/*_nonfree.cfg
+%config(noreplace) %{_sysconfdir}/mock/templates/*.tpl
 
 
 %changelog
+* Wed Oct 13 2021 Sérgio Basto <sergio@serjux.com> - 35.2-1
+- Templating
+
 * Mon Sep 13 2021 Sérgio Basto <sergio@serjux.com> - 35.1-1
 - v2 of add gpgcheck on updates-testing, debuginfo and branched repos
   commit 373c52a was incompleted
