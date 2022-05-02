@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-nonfree
-Version:        36.0
+Version:        36.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
@@ -8,7 +8,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 36.0
+Requires:       mock-rpmfusion-free >= 36.1
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -35,6 +35,10 @@ install -pm 0644 etc/mock/templates/*.tpl %{buildroot}%{_sysconfdir}/mock/templa
 
 
 %changelog
+* Sun May 01 2022 Sérgio Basto <sergio@serjux.com> - 36.0-2
+- F36 GA
+- Add el9 repos
+
 * Sun Feb 13 2022 Sérgio Basto <sergio@serjux.com> - 36.0-1
 - F36 branch
 
