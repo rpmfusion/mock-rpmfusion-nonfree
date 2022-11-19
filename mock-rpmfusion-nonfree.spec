@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-nonfree
-Version:        37.1
+Version:        37.2
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
@@ -8,7 +8,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 37.1
+Requires:       mock-rpmfusion-free >= 37.2
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -33,6 +33,9 @@ cp -a etc/mock %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
+* Sat Nov 19 2022 Sérgio Basto <sergio@serjux.com> - 37.2-1
+- F37 GA
+
 * Sat Sep 24 2022 Sérgio Basto <sergio@serjux.com> - 37.1-1
 - New names for configurations (%{reponame}-%{version}-%{arch}.cfg)
 - Make links to short names of settings names in el
