@@ -1,0 +1,35 @@
+From 2a9601feb7ed6c87400ad0fd9e809cf18a639e93 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?S=C3=A9rgio=20M=2E=20Basto?= <sergio@serjux.com>
+Date: Fri, 14 Nov 2025 00:40:48 +0000
+Subject: [PATCH] Fix typos in etc/mock/templates/rpmfusion_nonfree-rawhide
+
+---
+ CHANGELOG                                        | 5 ++++-
+ etc/mock/templates/rpmfusion_nonfree-rawhide.tpl | 4 ++--
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/etc/mock/templates/rpmfusion_nonfree-rawhide.tpl b/etc/mock/templates/rpmfusion_nonfree-rawhide.tpl
+index eb18e11..48461e5 100644
+--- a/etc/mock/templates/rpmfusion_nonfree-rawhide.tpl
++++ b/etc/mock/templates/rpmfusion_nonfree-rawhide.tpl
+@@ -3,7 +3,7 @@ config_opts['dnf.conf'] += """
+ name=RPM Fusion for Fedora Rawhide - Nonfree
+ #mirrorlist=https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-rawhide&arch=$basearch
+ metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-rawhide&arch=$basearch
+-gpgkey=file:///usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
++gpgkey=file:///usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-fedora-rawhide
+ gpgcheck=1
+ enabled=1
+ 
+@@ -11,7 +11,7 @@ enabled=1
+ name=RPM Fusion for Fedora Rawhide - Nonfree - Debug
+ #mirrorlist=https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-rawhide-debug&arch=$basearch
+ metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-rawhide-debug&arch=$basearch
+-gpgkey=file:///usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
++gpgkey=file:///usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-fedora-rawhide
+ gpgcheck=1
+ enabled=0
+ 
+-- 
+2.51.1
+
