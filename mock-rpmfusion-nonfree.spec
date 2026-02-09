@@ -1,15 +1,14 @@
 Name:           mock-rpmfusion-nonfree
-Version:        43.1
-Release:        2%{?dist}
+Version:        44.0
+Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
 License:        BSD
 URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
-Patch1:         0001-Fix-typos-in-etc-mock-templates-rpmfusion_nonfree-ra.patch
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 43.1
+Requires:       mock-rpmfusion-free >= 44.0
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -34,6 +33,10 @@ cp -a etc/mock %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
+* Mon Feb 09 2026 Sérgio Basto <sergio@serjux.com> - 44.0-1
+- F44 branched
+- Remove old configurations names
+
 * Fri Nov 14 2025 Sérgio Basto <sergio@serjux.com> - 43.1-2    
 - Fix typos in template rpmfusion_nonfree-rawhide
 
