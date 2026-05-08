@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-nonfree
-Version:        44.1
+Version:        44.2
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion NonFree Repository
 
@@ -8,7 +8,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-rpmfusion-free >= 44.1
+Requires:       mock-rpmfusion-free >= 44.2
 
 %description
 Mock config files for the RPM Fusion NonFree Repository
@@ -33,7 +33,10 @@ cp -a etc/mock %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
-* Mon Apr 27 2026 Sérgio Basto <sergio@serjux.com> - 44.1-2
+* Fri May 08 2026 Sérgio Basto <sergio@serjux.com> - 44.2-1
+- Re-add symlinks to EPEL 8 and 9
+
+* Mon Apr 27 2026 Sérgio Basto <sergio@serjux.com> - 44.1-1
 - F44 GA
 
 * Mon Feb 09 2026 Sérgio Basto <sergio@serjux.com> - 44.0-1
